@@ -7,7 +7,7 @@ import "@fontsource/merriweather"
 //import "./src/style.css"
 
 //import tailwind
-import "./src/styles/global.css";
+import "./src/global.css";
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
