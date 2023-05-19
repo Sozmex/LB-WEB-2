@@ -22,6 +22,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        root: `${__dirname}`,
+        src: `${__dirname}/src`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,6 +44,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -58,6 +82,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-smartypants`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
