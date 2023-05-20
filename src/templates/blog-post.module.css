@@ -50,10 +50,31 @@
   list-style-image: none;
 }
 
-.blogPost ul li,
+.blogPost ul li {
+  padding-left: 1em; /* Added to fix bullet points */
+  position: relative;
+}
+
+.blogPost ul li::before {
+  content: '•'; /* Unicode bullet point */
+  position: absolute;
+  left: 0; /* Adjust as needed */
+}
+
+.blogPost ol {
+  counter-reset: item;
+}
+
 .blogPost ol li {
-  padding-left: 0;
-  margin-bottom: calc(16px / 2);
+  counter-increment: item;
+  padding-left: 2em; /* Adjust as needed */
+  position: relative;
+}
+
+.blogPost ol li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0.75em; /* Adjust as needed */
 }
 
 .blogPost li > p {
@@ -73,8 +94,8 @@
   color: #4f5969;
   margin-left: calc(-1 * 24px);
   margin-right: 32px;
-  padding: 0 0 0 24px;
-  border-left: 4px solid #005b99;
+  padding: 0 0 0 44px; /* Adjusted to indent blockquote text */
+  border-left: 4px solid #810213;
   font-size: 1.2rem;
   font-style: italic;
   margin-bottom: 32px;
@@ -98,4 +119,49 @@
 .blogPost a:hover,
 .blogPost a:focus {
   text-decoration: none;
+}
+
+.blogPost {
+  margin: 1rem auto; /* Adjusted for smaller margin */
+  max-width: 700px;
+}
+
+.blogPostHeader {
+  margin-bottom: 1.75rem;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.date {
+  color: #6d6d6d;
+}
+
+.blogPostSection {
+  margin-left: 2rem; /* Adjusted
+  /* Adjusted for smaller margin */
+  margin-right: 2rem; 
+}
+
+.blogPostSection + .blogPostSection {
+  margin-top: 3rem;
+}
+
+/* Tags */
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #e0e0e0;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  color: #333;
 }
