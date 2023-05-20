@@ -56,6 +56,10 @@
   margin-bottom: calc(16px / 2);
 }
 
+.blogPost ul li {
+  margin-left: 1em; /* Added to fix bullet points */
+}
+
 .blogPost li > p {
   margin-bottom: calc(32px / 2);
 }
@@ -73,7 +77,7 @@
   color: #4f5969;
   margin-left: calc(-1 * 24px);
   margin-right: 32px;
-  padding: 0 0 0 24px;
+  padding: 0 0 0 44px; /* Adjusted to indent blockquote text */
   border-left: 4px solid #005b99;
   font-size: 1.2rem;
   font-style: italic;
@@ -98,4 +102,39 @@
 .blogPost a:hover,
 .blogPost a:focus {
   text-decoration: none;
+}
+
+.blogPost {
+  margin: 1rem auto; /* Adjusted for smaller margin */
+  max-width: 700px;
+}
+
+.blogPostHeader {
+  margin-bottom: 1.75rem;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.date {
+  color: #6d6d6d;
+}
+
+.blogPostSection {
+  margin-left: 0.1rem; /* Adjusted to indent blog post content */
+  margin-right: 0.1rem;
+}
+
+.content {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blogPostFooter {
+  margin-top: 1.5rem;
+}
+
+.blogPostNav {
+  margin-top: 1.5rem;
 }
