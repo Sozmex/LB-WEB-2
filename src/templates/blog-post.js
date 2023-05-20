@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as styles from './blog-post.module.css';
+
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -13,25 +15,30 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <article
-        className="blog-post"
+        className={styles.blogPost}
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className={styles.blogPostHeader}>
+          <h1 itemProp="headline" className={styles.title}>{post.frontmatter.title}</h1>
+          <p className={styles.date}>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className={`${styles.blogPostSection} ${styles.content}`}
         />
         <hr />
-        <footer>
+        <footer className={styles.blogPostFooter}>
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className={styles.blogPostNav}>
         <ul
           style={{
             display: `flex`,
@@ -61,16 +68,8 @@ const BlogPostTemplate = ({
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
-  )
-}
-
 export default BlogPostTemplate
+
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

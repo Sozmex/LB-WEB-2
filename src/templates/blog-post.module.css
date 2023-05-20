@@ -1,0 +1,101 @@
+/* Additional styles for the Blog Post */
+/* Heading */
+
+.blogPost h1,
+.blogPost h2,
+.blogPost h3,
+.blogPost h4,
+.blogPost h5,
+.blogPost h6 {
+  font-family: "MontserratVariable", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  margin-top: 48px;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.blogPost h2,
+.blogPost h3,
+.blogPost h4,
+.blogPost h5,
+.blogPost h6 {
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.blogPost h1 {
+  font-weight: 900;
+  font-size: 2.488rem;
+  color: black;
+}
+
+/* Prose */
+
+.blogPost p {
+  line-height: 1.625;
+  margin: 0 0 32px 0;
+  padding: 0;
+}
+
+.blogPost ul,
+.blogPost ol {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+.blogPost ul li,
+.blogPost ol li {
+  padding-left: 0;
+  margin-bottom: calc(16px / 2);
+}
+
+.blogPost li > p {
+  margin-bottom: calc(32px / 2);
+}
+
+.blogPost li *:last-child {
+  margin-bottom: 0;
+}
+
+.blogPost li > ul {
+  margin-left: 32px;
+  margin-top: calc(32px / 2);
+}
+
+.blogPost blockquote {
+  color: #4f5969;
+  margin-left: calc(-1 * 24px);
+  margin-right: 32px;
+  padding: 0 0 0 24px;
+  border-left: 4px solid #005b99;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.blogPost blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.blogPost blockquote > ul,
+.blogPost blockquote > ol {
+  list-style-position: inside;
+}
+
+/* Link */
+
+.blogPost a {
+  color: #005b99;
+}
+
+.blogPost a:hover,
+.blogPost a:focus {
+  text-decoration: none;
+}
