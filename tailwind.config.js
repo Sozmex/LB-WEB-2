@@ -1,13 +1,11 @@
-const plugin = require("tailwindcss/plugin");
-
 module.exports = {
   variants: {
     extend: {
-      textColor: ['group-hover'],
-      transform: ['group-hover'],
-      scale: ['group-hover'],
-      translate: ['responsive', 'group-hover', 'hover', 'focus'],
-    }
+      textColor: ["group-hover"],
+      transform: ["group-hover"],
+      scale: ["group-hover"],
+      translate: ["responsive", "group-hover", "hover", "focus"],
+    },
   },
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -33,7 +31,7 @@ module.exports = {
         300: "#74113f",
         100: "#74113f",
         50: "#74113f",
-        10: "#6e2e4c"
+        10: "#6e2e4c",
       },
       neutral: {
         900: "#2C2C2C",
@@ -41,7 +39,7 @@ module.exports = {
         500: "#7C7C7C",
         300: "#D9D9D6",
         100: "#E5E5E5",
-        50: "#f5f5f5"
+        50: "#f5f5f5",
       },
     },
     fontFamily: {
@@ -49,11 +47,12 @@ module.exports = {
       body: ["Outfit", "sans-serif"],
     },
     fontSize: {
-            "display-2xl": [
+      "display-2xl": [
         "72px",
         {
           letterSpacing: "-0.025em",
           lineHeight: "96px",
+          fontWeight: "bold",
         },
       ],
       "display-xl": [
@@ -61,6 +60,7 @@ module.exports = {
         {
           letterSpacing: "-0.025em",
           lineHeight: "72px",
+          fontWeight: "bold",
         },
       ],
       "display-lg": [
@@ -68,6 +68,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "60px",
+          fontWeight: "bold",
         },
       ],
       "display-md": [
@@ -75,6 +76,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "48px",
+          fontWeight: "bold",
         },
       ],
       "display-sm": [
@@ -82,6 +84,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "40px",
+          fontWeight: "bold",
         },
       ],
       "display-xs": [
@@ -89,6 +92,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "32px",
+          fontWeight: "bold",
         },
       ],
       "display-xxs": [
@@ -96,9 +100,9 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "26px",
+          fontWeight: "bold",
         },
       ],
-      
       "body-xl": [
         "20px",
         {
@@ -106,7 +110,6 @@ module.exports = {
           lineHeight: "32px",
         },
       ],
-
       "body-xxl": [
         "30px",
         {
@@ -114,7 +117,6 @@ module.exports = {
           lineHeight: "40px",
         },
       ],
-
       "body-lg": [
         "18px",
         {
@@ -139,8 +141,7 @@ module.exports = {
       "body-xs": [
         "12px",
         {
-          letterSpacing:
-          "0em",
+          letterSpacing: "0em",
           lineHeight: "16px",
         },
       ],
@@ -148,9 +149,12 @@ module.exports = {
     boxShadow: {
       xs: "0px 1px 2px rgba(17, 24, 39, 0.05)",
       sm: "0px 1px 3px rgba(17, 24, 39, 0.1), 0px 1px 2px rgba(17, 24, 39, 0.06)",
-      md: "0px 4px 8px -2px rgba(17, 24, 39, 0.1), 0px 2px 4px -2px rgba(17, 24, 39, 0.06)",
-      lg: "0px 12px 16px -4px rgba(17, 24, 39, 0.1), 0px 4px 6px -2px rgba(17, 24, 39, 0.05)",
-      xl: "0px 20px 24px -4px rgba(17, 24, 39, 0.1), 0px 8px 8px -4px rgba(17, 24, 39, 0.04)",
+      md:
+        "0px 4px 8px -2px rgba(17, 24, 39, 0.1), 0px 2px 4px -2px rgba(17, 24, 39, 0.06)",
+      lg:
+        "0px 12px 16px -4px rgba(17, 24, 39, 0.1), 0px 4px 6px -2px rgba(17, 24, 39, 0.05)",
+      xl:
+        "0px 20px 24px -4px rgba(17, 24, 39, 0.1), 0px 8px 8px -4px rgba(17, 24, 39, 0.04)",
       "2xl": "0px 24px 48px -12px rgba(17, 24, 39, 0.25)",
     },
     extend: {
@@ -167,37 +171,53 @@ module.exports = {
         62: "248px",
       },
       gridTemplateColumns: {
-        // Simple 8 cell grid
-        '8': 'repeat(8, minmax(0, 1fr))',
+        "8": "repeat(8, minmax(0, 1fr))", // Simple 8 cell grid
       },
       gridTemplateRows: {
-        // Simple 8 cell grid
-        '8': 'repeat(8, minmax(0, 1fr))',
+        "8": "repeat(8, minmax(0, 1fr))", // Simple 8 cell grid
       },
     },
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
+    require("tailwindcss"),
+    require("autoprefixer"),
+    require("postcss"),
+    function ({ addUtilities }) {
       addUtilities({
         ".vertical-rl": {
-          "writing-mode": "vertical-rl",
+          writingMode: "vertical-rl",
         },
       });
-    }),
-    plugin(function({ addComponents }) {
+    },
+    function ({ addComponents }) {
       const components = {
-        '.grid-cols-blog': {
-          gridTemplateColumns: 'repeat(4, 1fr)'
+        ".grid-cols-blog": {
+          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
         },
-        '.grid-rows-blog': {
-          gridTemplateRows: 'repeat(1, 1fr)'
+        ".grid-rows-blog": {
+          gridTemplateRows: "repeat(1, minmax(0, 1fr))",
         },
-        '.featured-post': {
-          display: 'grid',
-          gridTemplateColumns: '1fr 2fr',
+        ".featured-post": {
+          display: "grid",
+          gridTemplateColumns: "1fr 2fr",
+          gap: "1rem",
+          padding: "1rem",
+          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.08)",
+          borderRadius: "0.25rem",
         },
-      }
-      addComponents(components)
-    })
+        ".featured-post-image": {
+          width: "100%",
+          borderRadius: "0.25rem",
+          objectFit: "cover",
+        },
+        ".page-break": {
+          pageBreakBefore: "always",
+          borderTop: "1px solid #E5E5E5",
+          marginTop: "2rem",
+          paddingTop: "2rem",
+        },
+      };
+      addComponents(components);
+    },
   ],
 };

@@ -1,17 +1,14 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import * as styles from './blog-post.module.css';
 
-
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
-  //const siteTitle = site.siteMetadata?.title || `Title`
+const BlogPostTemplate = ({ data, location }) => {
+  const { markdownRemark: post, previous, next } = data;
 
   return (
     <Layout location={location}>
@@ -27,6 +24,7 @@ const BlogPostTemplate = ({
       >
         <header className={styles.blogPostHeader}>
           <h1 itemProp="headline" className={styles.title}>{post.frontmatter.title}</h1>
+          <img src={post.frontmatter.imageURL} alt={post.frontmatter.title} />
           <p className={styles.date}>{post.frontmatter.date}</p>
         </header>
         <section
@@ -61,46 +59,47 @@ const BlogPostTemplate = ({
   )
 }
 
-export default BlogPostTemplate
-
-
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
+query BlogPostBySlug(
+  $id: String!
+  $previousPostId: String
+  $nextPostId: String
+) {
+  site {
+    siteMetadata {
+      title
     }
   }
+  markdownRemark(id: { eq: $id }) {
+    id
+    excerpt(pruneLength: 160)
+    html
+    frontmatter {
+      title
+      date(formatString: "MMMM DD, YYYY")
+      description
+      
+    }
+  }
+  previous: markdownRemark(id: { eq: $previousPostId }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      
+    }
+  }
+  next: markdownRemark(id: { eq: $nextPostId }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      
+    }
+  }
+}
 `
