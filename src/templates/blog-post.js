@@ -11,14 +11,15 @@ const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = `Back to Blog Home`
+  //const siteTitle = site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Link className={styles.backlink} to="/">Back to Blog Home</Link>
       <article
         className={styles.blogPost}
         itemScope
@@ -30,7 +31,7 @@ const BlogPostTemplate = ({
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"a
+          itemProp="articleBody"
           className={`${styles.blogPostSection} ${styles.content}`}
         />
         <hr />
@@ -39,15 +40,7 @@ const BlogPostTemplate = ({
         </footer>
       </article>
       <nav className={styles.blogPostNav}>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -69,6 +62,7 @@ const BlogPostTemplate = ({
 }
 
 export default BlogPostTemplate
+
 
 
 export const pageQuery = graphql`

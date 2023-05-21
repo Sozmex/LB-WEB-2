@@ -1,4 +1,5 @@
 /* Additional styles for the Blog Post */
+
 /* Heading */
 
 .blogPost h1,
@@ -77,10 +78,6 @@
   left: 0.75em; /* Adjust as needed */
 }
 
-.blogPost ul li {
-  margin-left: 1em; /* Added to fix bullet points */
-}
-
 .blogPost li > p {
   margin-bottom: calc(32px / 2);
 }
@@ -132,6 +129,23 @@
 
 .blogPostHeader {
   margin-bottom: 1.75rem;
+  text-align: center; /* Added for center alignment */
+}
+
+.backlink {
+  color: #333;
+  text-decoration: none;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.backlink:hover {
+  background-color: #eee;
 }
 
 .title {
@@ -143,19 +157,103 @@
 }
 
 .blogPostSection {
-  margin-left: 0.1rem; /* Adjusted to indent blog post content */
-  margin-right: 0.1rem;
-}
-
-.content {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.blogPostFooter {
-  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem; 
 }
 
 .blogPostNav {
-  margin-top: 1.5rem;
+  margin: 2rem;
+}
+
+.blogPostNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tags */
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #e0e0e0;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+/* Navigation links */
+
+.backlink {
+  color: #333;
+  text-decoration: none;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.backlink:hover {
+  background-color: #eee;
+}
+
+/* Main blog post section */
+
+.blogPostSection {
+  margin-left: 2rem;
+  margin-right: 2rem; 
+}
+
+/* Blog post navigation */
+
+.blogPostNav {
+  margin: 2rem;
+}
+
+.blogPostNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blogPostNav li:first-child {
+  text-align: left;
+}
+
+.blogPostNav li:last-child {
+  text-align: right;
+}
+
+/* Tags */
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #e0e0e0;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  color: #333;
 }
