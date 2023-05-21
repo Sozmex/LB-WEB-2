@@ -39,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="p-2 mx-auto" style={{ maxWidth: '13in' }}>
         <h1 className="font-display md:text-display-xl text-display-lg items-center text-center">Featured Insights</h1>
         <p className="text-body-lg items-center text-center">
-          Our latest thinking on the issues that matter most in business and management.
+          Our latest thinking on the issues that matter most in AI and law.
         </p>
         <SectionBreak />
         <table className="w-full">
