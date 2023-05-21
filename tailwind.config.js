@@ -52,10 +52,26 @@ module.exports = {
         {
           letterSpacing: "-0.025em",
           lineHeight: "96px",
+          //fontWeight: "bold",
+        },
+      ],
+      "display-2xl-bold": [
+        "72px",
+        {
+          letterSpacing: "-0.025em",
+          lineHeight: "96px",
           fontWeight: "bold",
         },
       ],
       "display-xl": [
+        "60px",
+        {
+          letterSpacing: "-0.025em",
+          lineHeight: "72px",
+          //fontWeight: "bold",
+        },
+      ],
+      "display-xl-bold": [
         "60px",
         {
           letterSpacing: "-0.025em",
@@ -68,10 +84,26 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "60px",
+          //fontWeight: "bold",
+        },
+      ],
+      "display-lg-bold": [
+        "48px",
+        {
+          letterSpacing: "0em",
+          lineHeight: "60px",
           fontWeight: "bold",
         },
       ],
       "display-md": [
+        "36px",
+        {
+          letterSpacing: "0em",
+          lineHeight: "48px",
+         // fontWeight: "bold",
+        },
+      ],
+      "display-md-bold": [
         "36px",
         {
           letterSpacing: "0em",
@@ -84,6 +116,14 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "40px",
+          //fontWeight: "bold",
+        },
+      ],
+      "display-sm-bold": [
+        "30px",
+        {
+          letterSpacing: "0em",
+          lineHeight: "40px",
           fontWeight: "bold",
         },
       ],
@@ -92,7 +132,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "32px",
-          fontWeight: "bold",
+          //fontWeight: "bold",
         },
       ],
       "display-xxs": [
@@ -100,7 +140,7 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "26px",
-          fontWeight: "bold",
+          //fontWeight: "bold",
         },
       ],
       "body-xl": [
@@ -191,31 +231,18 @@ module.exports = {
     },
     function ({ addComponents }) {
       const components = {
-        ".grid-cols-blog": {
-          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-        },
-        ".grid-rows-blog": {
-          gridTemplateRows: "repeat(1, minmax(0, 1fr))",
-        },
+      
+        
         ".featured-post": {
           display: "grid",
           gridTemplateColumns: "1fr 2fr",
           gap: "1rem",
           padding: "1rem",
-          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.08)",
+          
           borderRadius: "0.25rem",
         },
-        ".featured-post-image": {
-          width: "100%",
-          borderRadius: "0.25rem",
-          objectFit: "cover",
-        },
-        ".page-break": {
-          pageBreakBefore: "always",
-          borderTop: "1px solid #E5E5E5",
-          marginTop: "2rem",
-          paddingTop: "2rem",
-        },
+     
+     
       };
       addComponents(components);
     },
