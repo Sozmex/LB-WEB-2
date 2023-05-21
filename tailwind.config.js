@@ -139,7 +139,8 @@ module.exports = {
       "body-xs": [
         "12px",
         {
-          letterSpacing: "0em",
+          letterSpacing:
+          "0em",
           lineHeight: "16px",
         },
       ],
@@ -165,6 +166,14 @@ module.exports = {
         30: "120px",
         62: "248px",
       },
+      gridTemplateColumns: {
+        // Simple 8 cell grid
+        '8': 'repeat(8, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        // Simple 8 cell grid
+        '8': 'repeat(8, minmax(0, 1fr))',
+      },
     },
   },
   plugins: [
@@ -175,7 +184,20 @@ module.exports = {
         },
       });
     }),
+    plugin(function({ addComponents }) {
+      const components = {
+        '.grid-cols-blog': {
+          gridTemplateColumns: 'repeat(4, 1fr)'
+        },
+        '.grid-rows-blog': {
+          gridTemplateRows: 'repeat(1, 1fr)'
+        },
+        '.featured-post': {
+          display: 'grid',
+          gridTemplateColumns: '1fr 2fr',
+        },
+      }
+      addComponents(components)
+    })
   ],
 };
-
-
