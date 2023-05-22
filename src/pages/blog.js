@@ -70,14 +70,14 @@ const BlogIndex = ({ data, location }) => {
           </tbody>
         </table>
         <SectionBreak1 />
-        <div style={{ paddingTop: '4rem', paddingBottom: '7rem' }}>
+        <div style={{ paddingTop: '6rem', paddingBottom: '7rem' }}>
           <table className="w-full table2 group-hover:text-primary-600 transition duration-300">
             <tbody>
               <tr className="grid-cols-blog group-hover:text-primary-600 transition duration-300">
                 {otherPosts.map((post, index) => (
                   <td
                     key={post.fields.slug}
-                    className="h-60 w-60 p-1"
+                    className="h-60 w-60 p-3"
                     style={{ minWidth: '240px' }}
                   >
                     <div
@@ -91,12 +91,12 @@ const BlogIndex = ({ data, location }) => {
                       }}
                       alt={post.frontmatter.title}
                     />
-                    <h2 className="font-bold pb-2 pt-3 group-hover:text-primary-600 transition duration-300">
+                    <h2 className="font-bold p-1 pb-2 pt-3 group-hover:text-primary-600 transition duration-300">
                       <Link to={post.fields.slug} itemProp="url">
                         <span itemProp="headline">{post.frontmatter.title}</span>
                       </Link>
                     </h2>
-                    <p className="pb-4">{post.frontmatter.date} - {post.frontmatter.description}</p>
+                    <p className="p-1 pb-4">{post.frontmatter.date} - {post.frontmatter.description}</p>
                   </td>
                 ))}
               </tr>
