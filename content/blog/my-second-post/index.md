@@ -1,7 +1,7 @@
 ---
 title: Due Diligence, File Review, and AI Automation - Article
 date: "2023-07-06T23:46:37.121Z"
-description: Artificial intelligence (AI) has the potential to revolutionize the way lawyers conduct business due diligence and other document analysis. As technology continues to advance,...
+description: Artificial intelligence (AI) has the potential to revolutionize the way lawyers conduct business due diligence and other document analysis. As technology continues to advance, AI-powered tools can streamline the process of document analysis, reduce costs for lawyers, and ultimately provide clients with better services...
 ---
 
 Artificial intelligence (AI) has the potential to revolutionize the way lawyers conduct business due diligence and other document analysis. As technology continues to advance, AI-powered tools can streamline the process of document analysis, reduce costs for lawyers, and ultimately provide clients with better services. However, it is important to note that lawyers will still need to review the work of the AI, and the quality of these reviews will be a critical issue. Let us explore how AI can be used in tax law as an example.
