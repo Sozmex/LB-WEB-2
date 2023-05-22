@@ -11,7 +11,7 @@ const Header = ({ navigate }) => {
     { name: "Services", href: "#services" },
     { name: "Insights", href: "#works" },
     { name: "People", href: "#services1" },
-    { name: "Support", href: "#services1" },
+    { name: "Support", href: "mailto:tech@lawbotics.ca" },
   ];
   return (
     <header>
@@ -40,7 +40,7 @@ const Header = ({ navigate }) => {
                 </Link>
               ))}
             </div>
-            <Button label="CONTACT US" link="#" />
+            <Button label="CONTACT US" link="mailto:contact@lawbotics.ca" />
           </div>
         </div>
       </div>

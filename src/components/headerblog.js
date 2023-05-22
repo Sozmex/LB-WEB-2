@@ -8,7 +8,7 @@ import Button from "./button";
 const Header = ({ navigate }) => {
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Support", href: "mailto:support@lawbotics.ca" },
+    { name: "Support", href: "mailto:tech@lawbotics.ca" },
   ];
 
   return (

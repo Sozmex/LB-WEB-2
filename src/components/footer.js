@@ -48,8 +48,8 @@ const Footer = () => {
               </p>
               <a
                 className="text-display-xs font-display font-normal text-primary-600"
-                href="mailto:hello@landify.design">
-                Lawbotics@gmail.com
+                href="mailto:contact@lawbotics.ca">
+                contact@lawbotics.ca
               </a>
             </div>
             <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const Footer = () => {
               <a
                 className="text-display-xs font-display font-normal text-primary-600"
                 href="/">
-                (999)999-9999
+                Coming Soon
               </a>
             </div>
           </div>
