@@ -43,7 +43,7 @@ const Header = ({ navigate }) => {
                 </ScrollLink>
               ))}
             </div>
-            <Button label="CONTACT US" link="#" />
+            <Button label="CONTACT US" link="mailto:contact@lawbotics.ca" />
           </div>
         </div>
       </div>
