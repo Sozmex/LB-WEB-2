@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -16,7 +15,6 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Link className={styles.backlink} to="/">Back to Blog Home</Link>
       <article
         className={styles.blogPost}
         itemScope
@@ -24,7 +22,6 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header className={styles.blogPostHeader}>
           <h1 itemProp="headline" className={styles.title}>{post.frontmatter.title}</h1>
-          <img src={post.frontmatter.imageURL} alt={post.frontmatter.title} />
           <p className={styles.date}>{post.frontmatter.date}</p>
         </header>
         <section
@@ -52,6 +49,9 @@ const BlogPostTemplate = ({ data, location }) => {
                 {next.frontmatter.title} →
               </Link>
             )}
+          </li>
+          <li>
+            <Link className={styles.backlink} to="/">Back to Blog Home</Link>
           </li>
         </ul>
       </nav>
