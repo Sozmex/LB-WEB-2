@@ -231,6 +231,24 @@ module.exports = {
           padding: "1rem",
           borderRadius: "0.25rem",
         },
+        ".navContainer": {
+          display: "flex",
+          justifyContent: "center",
+        },
+        ".blogPostNav": {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "5rem auto",
+          width: "80%",
+        },
+        ".blogPostNav ul": {
+          listStyle: "none",
+          padding: "0",
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+        },
       };
       addComponents(components);
     },

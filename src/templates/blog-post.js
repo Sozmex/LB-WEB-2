@@ -34,27 +34,38 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      <nav className={styles.blogPostNav}>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-          <li>
-            <Link className={styles.backlink} to="/">Back to Blog Home</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="flex justify-center pl-14 pb-4">
+  <table>
+    <tr>
+    <td className="text-left hover:text-primary-600 hover:translate-y-1 transition-all duration-300">
+  <nav>
+    {previous && (
+      <Link to={previous.fields.slug} rel="prev">
+        ← {previous.frontmatter.title}
+      </Link>
+    )}
+  </nav>
+</td>
+<td className="text-center px-9 hover:text-primary-600 hover:translate-y-1 transition-all duration-300">
+  <nav>
+    <Link to="/blog">| Home |</Link>
+  </nav>
+</td>
+<td className="text-right hover:text-primary-600 hover:translate-y-1 transition-all duration-300">
+  <nav>
+    {next && (
+      <Link to={next.fields.slug} rel="next">
+        {next.frontmatter.title} →
+      </Link>
+    )}
+  </nav>
+</td>
+
+    </tr>
+  </table>
+</div>
+
+
     </Layout>
   )
 }
@@ -80,7 +91,6 @@ query BlogPostBySlug(
       title
       date(formatString: "MMMM DD, YYYY")
       description
-      
     }
   }
   previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -89,7 +99,6 @@ query BlogPostBySlug(
     }
     frontmatter {
       title
-      
     }
   }
   next: markdownRemark(id: { eq: $nextPostId }) {
@@ -98,7 +107,6 @@ query BlogPostBySlug(
     }
     frontmatter {
       title
-      
     }
   }
 }
