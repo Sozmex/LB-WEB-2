@@ -52,7 +52,6 @@ module.exports = {
         {
           letterSpacing: "-0.025em",
           lineHeight: "96px",
-          //fontWeight: "bold",
         },
       ],
       "display-2xl-bold": [
@@ -68,7 +67,6 @@ module.exports = {
         {
           letterSpacing: "-0.025em",
           lineHeight: "72px",
-          //fontWeight: "bold",
         },
       ],
       "display-xl-bold": [
@@ -84,7 +82,6 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "60px",
-          //fontWeight: "bold",
         },
       ],
       "display-lg-bold": [
@@ -100,7 +97,6 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "48px",
-         // fontWeight: "bold",
         },
       ],
       "display-md-bold": [
@@ -116,7 +112,6 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "40px",
-          //fontWeight: "bold",
         },
       ],
       "display-sm-bold": [
@@ -132,7 +127,6 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "32px",
-          //fontWeight: "bold",
         },
       ],
       "display-xxs": [
@@ -140,7 +134,6 @@ module.exports = {
         {
           letterSpacing: "0em",
           lineHeight: "26px",
-          //fontWeight: "bold",
         },
       ],
       "body-xl": [
@@ -231,18 +224,13 @@ module.exports = {
     },
     function ({ addComponents }) {
       const components = {
-      
-        
         ".featured-post": {
           display: "grid",
           gridTemplateColumns: "1fr 2fr",
           gap: "1rem",
           padding: "1rem",
-          
           borderRadius: "0.25rem",
         },
-     
-     
       };
       addComponents(components);
     },
