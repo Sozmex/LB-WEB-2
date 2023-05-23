@@ -104,6 +104,7 @@ const BlogIndex = ({ data, location }) => {
           </table>
         </div>
       </div>
+      
     </Layout>
   );
 };
