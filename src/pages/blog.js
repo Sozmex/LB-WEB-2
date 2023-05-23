@@ -42,34 +42,28 @@ const BlogIndex = ({ data, location }) => {
           Our latest thinking on the issues that matter most in AI and law.
         </p>
         <SectionBreak />
-        <table className="w-full group">
-          <tbody>
-            <tr className="featured-post group-hover:text-primary-600 transition duration-300 transform transition-transform duration-300 group-hover:scale-110">
-              <td className="pt-0" style={{ height: '28vh', width: '49vh', padding: 0 }}>
-                <h2 className="font-display text-display-lg pb-2 group-hover:text-primary-600 transition duration-300">
-                  <Link to={latestPost.fields.slug} itemProp="url">
-                    <span itemProp="headline">{latestPost.frontmatter.title}</span>
-                  </Link>
-                </h2>
-                <p>{latestPost.frontmatter.date} - {latestPost.frontmatter.description}</p>
-              </td>
-              <td>
-                <div
-                  className="featured-post-image"
-                  style={{
-                    backgroundImage: `url(${blogImage1})`,
-                    backgroundSize: "100% 100%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  alt={latestPost.frontmatter.title}
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="group featured-post flex flex-col md:flex-row group-hover:text-primary-600 transition duration-300 transform transition-transform duration-300 group-hover:scale-110 my-4">
+          <div className="md:w-1/2 p-2">
+            <h2 className="font-display text-display-lg pb-2 group-hover:text-primary-600 transition duration-300">
+              <Link to={latestPost.fields.slug} itemProp="url">
+                <span itemProp="headline">{latestPost.frontmatter.title}</span>
+              </Link>
+            </h2>
+            <p>{latestPost.frontmatter.date} - {latestPost.frontmatter.description}</p>
+          </div>
+          <div className="md:w-1/2">
+            <div
+              className="featured-post-image w-full h-full"
+              style={{
+                backgroundImage: `url(${blogImage1})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+              alt={latestPost.frontmatter.title}
+            />
+          </div>
+        </div>
         <SectionBreak1 />
         <div style={{ paddingTop: '0rem', paddingBottom: '15rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
   <table className="w-full table2">
