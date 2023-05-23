@@ -1,6 +1,6 @@
 ---
 title: Due Diligence, File Review, and AI Automation - Article
-date: "2023-07-06T23:46:37.121Z"
+date: "2023-05-22T23:46:37.121Z"
 description: Artificial intelligence (AI) has the potential to revolutionize the way lawyers conduct business due diligence and other document analysis. As technology continues to advance, AI-powered tools can streamline the process of document analysis, reduce costs for lawyers, and ultimately provide clients with better services...
 ---
 
