@@ -37,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle} containerStyle={{ padding: "0 1in" }}>
       <Seo title="All posts" />
       <div className="p-2 mx-auto" style={{ maxWidth: '13in' }}>
-        <h1 className="font-display md:text-display-xl text-display-lg items-center text-center pt-3">Featured Insights</h1>
+        <h1 className="font-display md:text-display-xl text-display-lg items-center text-center pt-3 pb-2">Featured Insights</h1>
         <p className="text-body-lg items-center text-center">
           Our latest thinking on the issues that matter most in AI and law.
         </p>
