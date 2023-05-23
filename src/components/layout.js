@@ -29,7 +29,7 @@ const Layout = ({ location, title, children }) => {
         {header}
       </header>
       <main>{children}</main>
-      <Footer>
+      <Footer >
       
       </Footer>
     </div>
