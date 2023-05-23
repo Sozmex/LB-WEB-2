@@ -33,7 +33,7 @@ const Services = () => {
             <ServiceItem
               icon={ConstructionIcon}
               title="Research"
-              description="We research the newest and most innovative AI products and services we think will be valuable to the legal profession."
+              description="We research the latest in AI technology and assess relevant and suitability"
             />
           </div>
         </div>
