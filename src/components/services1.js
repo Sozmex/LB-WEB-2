@@ -50,8 +50,8 @@ const Services1 = () => {
               bio={{
                 name: "Zach Osgarby",
                 paragraphs: [
-                  "Zach Osgarby is a technology enthusiast...",
-                  "In his free time..."
+                  "Coming Soon...",
+                  
                 ]
               }}
             />
