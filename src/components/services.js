@@ -23,20 +23,17 @@ const Services = () => {
             <ServiceItem
               icon={ArchitectureIcon}
               title="Consulting"
-              description="Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                  nunc, molestie volutpat ipsum, ultricies."
+              description="We find the best AI products and services to optimize your Firm's workflow."
             />
             <ServiceItem
               icon={RenovationIcon}
               title="Integration"
-              description="Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                  nunc, molestie volutpat ipsum, ultricies."
+              description="We help to integrate handpicked AI products and services into your firm's pre-existing systems"
             />
             <ServiceItem
               icon={ConstructionIcon}
               title="Research"
-              description="Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                  nunc, molestie volutpat ipsum, ultricies."
+              description="We research the newest and most innovative AI products and services we think will be valuable to the legal profession."
             />
           </div>
         </div>
