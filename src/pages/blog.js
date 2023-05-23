@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
         <div className="group featured-post flex flex-col gap-8 md:flex-row group-hover:text-primary-600 transition duration-300 transform transition-transform duration-300 group-hover:scale-110 my-4">
           <div className="md:w-1/2 p-2">
             <Link to={latestPost.fields.slug} itemProp="url" className="group">
-              <h2 className="font-display text-display-lg pb-2 group-hover:text-primary-600 transition duration-300">
+              <h2 className="font-display text-display-lg pb-1 group-hover:text-primary-600 transition duration-300">
                 <span itemProp="headline">{latestPost.frontmatter.title}</span>
               </h2>
               <p>{latestPost.frontmatter.date} - {latestPost.frontmatter.description}</p>
@@ -67,7 +67,7 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </div>
         <SectionBreak1 />
-        <div style={{ paddingTop: '0rem', paddingBottom: '15rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
+        <div style={{ paddingTop: '0.5rem', paddingBottom: '15rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
           <table className="w-full table2">
             <tbody>
               <tr className="grid-cols-blog">
