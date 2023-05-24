@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
   const otherPosts = posts.slice(1);
 
   return (
-    <Layout location={location} title={siteTitle} containerStyle={{ padding: "0 1in" }}>
+    <Layout location={location} title={siteTitle} containerStyle={{ padding: "0 0in" }}>
       <Seo title="All posts" />
       <div className="p-2 mx-auto" style={{ maxWidth: '13in' }}>
         <h1 className="font-display md:text-display-xl text-display-lg items-center text-center pt-3 pb-2">Featured Insights</h1>
@@ -67,44 +67,35 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </div>
         <SectionBreak1 />
-        <div style={{ paddingTop: '0.5rem', paddingBottom: '15rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
-          <table className="w-full table2">
-            <tbody>
-              <tr className="grid-cols-blog">
-                {otherPosts.map((post, index) => (
-                  <td
-                    key={post.fields.slug}
-                    className="h-60 w-60 p-3 group"
-                    style={{ minWidth: '240px', verticalAlign: 'top' }}
-                  >
-                    <Link to={post.fields.slug} itemProp="url" className="group">
-                      <div
-                        className="post-image group-hover:scale-110 transition-transform duration-300"
-                        style={{
-                          backgroundImage: `url(${index === 0 ? blogImage2 : index === 1 ? blogImage3 : index === 2 ? blogImage4 : index === 3 ? blogImage5 : blogImage6})`,
-                          backgroundSize: "cover",
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "center",
-                          width: "100%",
-                          height: "100%",
-                        }}
-                        alt={post.frontmatter.title}
-                      />
-                      <div className="post-text">
-                        <h2 className="font-bold p-1 pb-2 pt-3 group-hover:text-primary-600 transition duration-300">
-                          <span itemProp="headline">{post.frontmatter.title}</span>
-                        </h2>
-                        <p className="p-1 pb-4">{post.frontmatter.date} - {post.frontmatter.description}</p>
-                      </div>
-                    </Link>
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4" style={{ paddingTop: '0rem', paddingBottom: '15rem', paddingLeft: '0rem', paddingRight: '0rem' }}>
+          {otherPosts.map((post, index) => (
+            <div
+              key={post.fields.slug}
+              className="h-60 w-60 p-3 group"
+              style={{ minWidth: '290px', verticalAlign: 'top' }}
+            >
+              <Link to={post.fields.slug} itemProp="url" className="group">
+                <div
+                  className="post-image group-hover:scale-110 transition-transform duration-300 w-full h-full"
+                  style={{
+                    backgroundImage: `url(${index === 0 ? blogImage2 : index === 1 ? blogImage3 : index === 2 ? blogImage4 : index === 3 ? blogImage5 : blogImage6})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                  alt={post.frontmatter.title}
+                />
+                <div className="post-text">
+                  <h2 className="font-bold p-1 pb-2 pt-3 group-hover:text-primary-600 transition duration-300">
+                    <span itemProp="headline">{post.frontmatter.title}</span>
+                  </h2>
+                  <p className="p-1 pb-4">{post.frontmatter.date} - {post.frontmatter.description}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
-      
     </Layout>
   );
 };
